@@ -141,10 +141,3 @@ class LinkedList:
             return removed_ele
 
 
-# Example usage
-obj = LinkedList(3)
-list_obj = [1, 4, 3, 2, 5, 2]
-for num in list_obj:
-    obj.append(num)
-
-obj.print()
