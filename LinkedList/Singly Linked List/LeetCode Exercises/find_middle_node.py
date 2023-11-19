@@ -19,48 +19,30 @@ The method should only traverse the linked list once.  In other words, you can o
 
 '''
 
+from main import LinkedList
 
-class Node:
+class FindMiddle(LinkedList):
+
     def __init__(self, value):
-        self.value = value
-        self.next = None
-        
+        super().__init__(value)
 
-class LinkedList:
-    def __init__(self, value):
-        new_node = Node(value)
-        self.head = new_node
-        self.tail = new_node
+    def find_middle(self):
+        slow = self.head
+        fast = self.head
 
-        
-    def append(self, value):
-        new_node = Node(value)
-        if self.head == None:
-            self.head = new_node
-            self.tail = new_node
-        else:
-            self.tail.next = new_node
-            self.tail = new_node
-        return True
-        
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
 
-    # WRITE FIND_MIDDLE_NODE METHOD HERE 
-
-    def find_middle_node(self):
-        
-   
+        print(slow.value)
 
 
-
-
-my_linked_list = LinkedList(1)
-my_linked_list.append(2)
-my_linked_list.append(3)
-my_linked_list.append(4)
-my_linked_list.append(5)
-
-print( my_linked_list.find_middle_node().value )
-
+if __name__ == "__main__":
+    new_node = FindMiddle(10)
+    items = [5, 20, 15, 25]
+    for i in items:
+        new_node.append(i)
+    new_node.find_middle()
 
 
 """
