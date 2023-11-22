@@ -73,5 +73,3 @@ You must solve the problem WITHOUT MODIFYING THE VALUES in the list's nodes (i.e
 
 '''
 
-
-

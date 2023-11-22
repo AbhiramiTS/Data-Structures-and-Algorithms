@@ -1,3 +1,4 @@
+
 '''
 LL: Has Loop ( ** Interview Question)
 
@@ -21,5 +22,3 @@ If there is a loop in the list, the fast pointer will eventually meet the slow p
 If the fast pointer reaches the end of the list or encounters a None value, it means there is no loop in the list. In this case, the method should return False.
 
 '''
-
-# Check LinkedListProblems/detect_loop.py for the solution 
