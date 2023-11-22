@@ -23,11 +23,41 @@ def zeros_to_end(arr):
 
 
 
+def test_zeros_to_end():
+    # Test Case 1: General case
+    items1 = [8, 5, 0, 10, 0, 20]
+    zeros_to_end(items1)
+    assert items1 == [8, 5, 10, 20, 0, 0]
+
+    # Test Case 2: All zeros at the beginning
+    items2 = [0, 0, 0, 0, 10, 0]
+    zeros_to_end(items2)
+    assert items2 == [10, 0, 0, 0, 0, 0]
+
+    # Test Case 3: No zeros
+    items3 = [10, 20]
+    zeros_to_end(items3)
+    assert items3 == [10, 20]
+
+    # Test Case 4: All zeros
+    items4 = [0, 0, 0]
+    zeros_to_end(items4)
+    assert items4 == [0, 0, 0]
+
+    # Test Case 5: Empty list
+    items5 = []
+    zeros_to_end(items5)
+    assert items5 == []
+
+    print("All test cases passed!")
+
 if __name__ == "__main__":
-    items = [10, 10, 0, 20, 0, 30, 0, 0, 0] 
-    # items = [0, 20, 0]
+    items = [8, 5, 0, 10, 0, 20]
     print(items)
     zeros_to_end(items)
     print(items)
-    # print(list(res))
+
+    # Run the test cases
+    test_zeros_to_end()
+
 
